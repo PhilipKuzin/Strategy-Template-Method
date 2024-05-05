@@ -29,7 +29,6 @@ namespace ThirdHW
                     _tradeSpeech.text = _trader.Trade();
             }
         }
-
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;

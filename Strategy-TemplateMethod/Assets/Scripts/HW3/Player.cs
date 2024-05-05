@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 
-
 namespace ThirdHW
 {
     public class Player : MonoBehaviour
