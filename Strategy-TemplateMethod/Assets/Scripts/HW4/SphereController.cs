@@ -21,7 +21,6 @@ public class SphereController : MonoBehaviour
 
     public bool IsWin()
     {
-        Debug.Log("Зашли внутри чека");
         if (_mode?.IsWin(_reds, _greens, _whites) == true)
         {
             return true;
