@@ -9,6 +9,7 @@ namespace ThirdHW
     {
         public event Action OnReputationIncreased;
         public event Action OnReputationReduced;
+        public event Action OnReputationChanged;
 
         public int Reputation => _reputation;
         private int _reputation;
@@ -16,14 +17,15 @@ namespace ThirdHW
         public void IncreaseReputation()
         {
             _reputation++;
-            OnReputationIncreased?.Invoke();
-            
+            OnReputationIncreased?.Invoke();      
+            OnReputationChanged?.Invoke();
         }
 
         public void ReduceReputation()
         {
             _reputation--;
             OnReputationReduced?.Invoke();
+            OnReputationChanged?.Invoke();
         }
     }
 
