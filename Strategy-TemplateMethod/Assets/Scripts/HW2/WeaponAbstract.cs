@@ -2,18 +2,14 @@ using UnityEngine;
 
 public abstract class WeaponAbstract : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public Transform spawnBulletPoint;
-    public Rigidbody bulletRb => bulletPrefab.GetComponent<Rigidbody>();
+    [field: SerializeField] protected Transform spawnBulletPoint { get; private set; }
+    [field: SerializeField] protected Bullet bulletPrefab { get; private set; }
 
-	private int _shotSpeed = 1500;
-
-	public int ShotSpeed
-	{
-		get { return _shotSpeed; }
-		private set { _shotSpeed = value; }
-	}
-
-	public abstract void Shot(); 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out IWeaponHolder weaponHolder))
+            weaponHolder.SetWeapon(this);
+    }
+    public abstract void Shoot();
 
 }

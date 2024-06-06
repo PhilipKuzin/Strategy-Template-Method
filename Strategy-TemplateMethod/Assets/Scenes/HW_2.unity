@@ -369,8 +369,8 @@ GameObject:
   - component: {fileID: 164651702}
   - component: {fileID: 164651701}
   - component: {fileID: 164651700}
-  - component: {fileID: 164651704}
   - component: {fileID: 164651705}
+  - component: {fileID: 164651706}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -467,19 +467,6 @@ Transform:
   - {fileID: 2138306885}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &164651704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164651699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93362f06534c11a47b7a8c64642815c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gunSoket: {fileID: 2138306884}
 --- !u!54 &164651705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,6 +494,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &164651706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164651699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93362f06534c11a47b7a8c64642815c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunSoket: {fileID: 2138306885}
 --- !u!1 &324632419
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd837c36968d8640a77f75b17929696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4180071167977116022, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
-  spawnBulletPoint: {fileID: 1501102810}
+  <spawnBulletPoint>k__BackingField: {fileID: 1501102810}
+  <bulletPrefab>k__BackingField: {fileID: -8985037268930630407, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
 --- !u!65 &556817169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1012,8 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d70a799bf2292a4e85aa0499a174b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4180071167977116022, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
-  spawnBulletPoint: {fileID: 1291553518}
+  <spawnBulletPoint>k__BackingField: {fileID: 1291553518}
+  <bulletPrefab>k__BackingField: {fileID: -8985037268930630407, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
 --- !u!1 &1182629165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,8 +1466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0beda4e31e4804dbc627b9ce79d45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4180071167977116022, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
-  spawnBulletPoint: {fileID: 2073949326}
+  <spawnBulletPoint>k__BackingField: {fileID: 2073949326}
+  <bulletPrefab>k__BackingField: {fileID: -8985037268930630407, guid: 7542ad3ae55d54242a470ff00711c1fd, type: 3}
 --- !u!1 &1810537045
 GameObject:
   m_ObjectHideFlags: 0

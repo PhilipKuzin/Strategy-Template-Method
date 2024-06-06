@@ -4,15 +4,13 @@ public class Shotgun : WeaponAbstract
 {
     private int _ammoCount = 30;
     private int _shellsInShot = 3;
-    public override void Shot()
+    public override void Shoot()
     {
-        if (_ammoCount <= 0)
+        if (_ammoCount <= _shellsInShot)
             return;
         for (int i = 0; i < _shellsInShot; i++) 
         {
-            Rigidbody cloneBullet;
-            cloneBullet = Instantiate(bulletRb, spawnBulletPoint.position, spawnBulletPoint.rotation);
-            cloneBullet.AddForce(spawnBulletPoint.transform.forward * ShotSpeed);
+            bulletPrefab.Launch(spawnBulletPoint);
         }
         _ammoCount = _ammoCount - _shellsInShot;
     }

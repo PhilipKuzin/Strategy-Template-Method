@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class Pistol : WeaponAbstract
 {
-    public override void Shot()
+    public override void Shoot()
     {
-        Rigidbody cloneBullet;
-        cloneBullet = Instantiate(bulletRb, spawnBulletPoint.position, spawnBulletPoint.rotation);
-        cloneBullet.AddForce(spawnBulletPoint.transform.forward * ShotSpeed);
+        bulletPrefab.Launch(spawnBulletPoint);
     }
 }
