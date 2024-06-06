@@ -1,38 +1,42 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 namespace ThirdHW
 {
     public class Trader : MonoBehaviour
     {
         [SerializeField] private TMP_Text _tradeSpeech;
-        private ITrader _trader;
+
+        public event Action OnTrade;
+        public ITrader TraderStrategy { get; private set; }
         private float _tradeRadius = 2f;
-       
+
         private void Update()
         {
             CheckForTrade();
         }
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, _tradeRadius);
+        }
+
         public void SetTradeBehaviour(ITrader tradeBeh)
         {
-            _trader = tradeBeh;
+            TraderStrategy = tradeBeh;
         }
 
         private void CheckForTrade()
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, _tradeRadius);
-            
+
             foreach (Collider collider in colliders)
             {
-                if (collider.TryGetComponent(out Player player))
-                    _tradeSpeech.text = _trader.Trade();
+                if (collider.TryGetComponent(out IBuyer player))
+                    OnTrade?.Invoke();
             }
-        }
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere (transform.position, _tradeRadius);
         }
     }
 }

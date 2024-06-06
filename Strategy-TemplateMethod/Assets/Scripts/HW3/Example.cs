@@ -14,15 +14,15 @@ namespace ThirdHW
 
         private void Update()
         {
-            if (_player.GetReputation() <= 3)
+            if (_player.Reputation <= 3)
             {
                 _trader.SetTradeBehaviour(new NoTradeBehaviour());
             }
-            if (_player.GetReputation() >= 3 && _player.GetReputation() < 5)
+            if (_player.Reputation >= 3 && _player.Reputation < 5)
             {
                 _trader.SetTradeBehaviour(new FruitTradeBehaviour());
             }
-            if (_player.GetReputation() >= 5)
+            if (_player.Reputation >= 5)
             {
                 _trader.SetTradeBehaviour(new ArmorTradeBehaviour());
             }
