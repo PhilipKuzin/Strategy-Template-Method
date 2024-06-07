@@ -3,5 +3,5 @@ using UnityEngine;
 
 public class TraderInfoView : MonoBehaviour
 {
-    [field: SerializeField] public TMP_Text TadeSpeech { get; private set; }
+    [field: SerializeField] public TMP_Text TradeSpeech { get; private set; }
 }

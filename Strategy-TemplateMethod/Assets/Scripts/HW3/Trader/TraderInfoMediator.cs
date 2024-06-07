@@ -18,7 +18,7 @@ public class TraderInfoMediator : MonoBehaviour
 
     private void ShowTradeSpeech()
     {
-        _traderView.TadeSpeech.text = _trader.TraderStrategy.Trade();
+        _traderView.TradeSpeech.text = _trader.TraderStrategy.Trade();
     }
 
 }
