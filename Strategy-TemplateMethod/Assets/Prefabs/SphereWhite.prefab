@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1641958063094078430}
   - component: {fileID: -2297680799381734645}
   - component: {fileID: 3050556084230698564}
+  - component: {fileID: -943432384812303667}
   m_Layer: 0
   m_Name: SphereWhite
   m_TagString: White
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f116776bb277d438d4a75af549aaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Color>k__BackingField: 1
 --- !u!54 &3050556084230698564
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +148,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-943432384812303667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7282730058105451942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f116776bb277d438d4a75af549aaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Color>k__BackingField: 0

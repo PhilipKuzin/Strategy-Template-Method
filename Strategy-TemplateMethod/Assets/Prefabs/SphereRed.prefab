@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6100397311768640024}
   - component: {fileID: -4587776384112933285}
   - component: {fileID: 2582217212530986019}
+  - component: {fileID: -1780845322434409547}
   m_Layer: 0
   m_Name: SphereRed
   m_TagString: Red
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f116776bb277d438d4a75af549aaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Color>k__BackingField: 0
 --- !u!54 &2582217212530986019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +148,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1780845322434409547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675661945060261233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f116776bb277d438d4a75af549aaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Color>k__BackingField: 0

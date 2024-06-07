@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-public class PopAllBehaviour : IPlayable
+public class PopAllBehaviour : IVictoryCondition
 {
-    public bool IsWin(List<GameObject> reds,  List<GameObject> greens, List<GameObject> whites)
+    public bool IsWin(List<Sphere> spheres)
     {
-       if (reds.All(obj => obj == null) && greens.All(obj => obj == null) && whites.All(obj => obj == null))
+       if (spheres.All(obj => obj == null))
             return true;
        return false;
     }

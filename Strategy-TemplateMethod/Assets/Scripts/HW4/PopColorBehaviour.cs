@@ -1,13 +1,30 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-public class PopColorBehaviour : IPlayable
+public class PopColorBehaviour : IVictoryCondition
 {
-    public bool IsWin(List<GameObject> reds, List<GameObject> greens, List<GameObject> whites)
+    public bool IsWin(List<Sphere> spheres)
     {
-        if (reds.All(obj => obj == null) || greens.All(obj => obj == null) || whites.All(obj => obj == null))
+        var resultRed = spheres.Where(s => s.Color == SphereColor.Red);
+        var resultWhite = spheres.Where(s => s.Color == SphereColor.White);
+        var resultGreen = spheres.Where(s => s.Color == SphereColor.Green);
+
+
+        if (resultRed.All(s => s == null))
+        {
             return true;
+        }
+
+        if (resultGreen.All(s => s == null))
+        {
+            return true;
+        }
+
+        if (resultWhite.All(s => s == null))
+        {
+            return true;
+        }
+
         return false;
     }
 }
